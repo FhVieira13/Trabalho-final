@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+    <h1>Classificação</h1>
+    <table class="classificacao">
+        <thead>
+            <tr><th>Posição</th><th>Time</th><th>Pontos</th></tr>
+        </thead>
+        <tbody>
+        {% for time in classificacao %}
+        <tr>
+            <td>{{ time.pos }}</td>
+            <td>{{ time.time }}</td>
+            <td>{{ time.pontos }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

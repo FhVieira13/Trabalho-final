@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+    <h1>Jogos</h1>
+    <ul>
+    {% for jogo in jogos %}
+        <li>Rodada {{ jogo.rodada }}: {{ jogo.casa }} vs {{ jogo.fora }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

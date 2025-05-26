@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Início</title>
+</head>
+<body>
+    <h1>Notícias do Campeonato Paulista</h1>
+    {% for noticia in noticias %}
+        <div class="noticia">
+            <h2>{{ noticia.titulo }}</h2>
+            <img src="{{ url_for('static', filename=noticia.imagem) }}" alt="Imagem da notícia">
+        </div>
+    {% endfor %}
+</body>
+</html>

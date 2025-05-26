@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+    <h1>Elenco do {{ time }}</h1>
+    <ul>
+    {% for jogador in elenco %}
+        <li>{{ jogador }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('ver_times') }}">Voltar</a>
+</body>
+</html>
